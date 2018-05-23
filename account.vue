@@ -24,28 +24,3 @@
   </div>
 </template>
 
-<script>
-var CryptoJS = require("crypto-js");
-export default {
-	name: 'RegistrationForm',
-  data: function(){
-    return{
-      fields_data: {
-        fname: this.fields.fname,
-        lname: this.fields.lname
-        bname: this.fields.bname
-        locname: this.fields.locname
-        email: this.fields.email
-        pass: this.fields.pass
-      }
-    }
-  },
-	props: ["fields", "action"],
-    methods: {
-      handleClick: function(evt){
-        this.action(this.fields_data)
-      }
-    }
-}
-</script>
-<style></style>
